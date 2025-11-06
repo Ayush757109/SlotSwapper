@@ -1,0 +1,49 @@
+<!-- frontend/marketplace.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - SlotSwapper</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">SlotSwapper</div>
+        <div class="nav-links">
+            <a href="calendar.html" class="nav-link">My Calendar</a>
+            <a href="marketplace.html" class="nav-link active">Marketplace</a>
+            <a href="requests.html" class="nav-link">Swap Requests</a>
+            <button id="logoutBtn" class="btn btn-outline">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Available Slots</h1>
+        <p>Browse swappable slots from other users</p>
+
+        <!-- Swap Modal -->
+        <div id="swapModal" class="modal">
+            <div class="modal-content">
+                <h3>Request Swap</h3>
+                <p>Select one of your swappable slots to offer:</p>
+                <div id="mySwappableSlots" class="slots-list">
+                    <!-- User's swappable slots will be loaded here -->
+                </div>
+                <div class="form-actions">
+                    <button id="cancelSwapBtn" class="btn btn-secondary">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="marketplaceContainer" class="marketplace-grid">
+            <!-- Available slots will be loaded here -->
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/marketplace.js"></script>
+</body>
+</html>

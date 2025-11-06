@@ -1,0 +1,44 @@
+<!-- frontend/requests.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Requests - SlotSwapper</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">SlotSwapper</div>
+        <div class="nav-links">
+            <a href="calendar.html" class="nav-link">My Calendar</a>
+            <a href="marketplace.html" class="nav-link">Marketplace</a>
+            <a href="requests.html" class="nav-link active">Swap Requests</a>
+            <button id="logoutBtn" class="btn btn-outline">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Swap Requests</h1>
+        
+        <div class="requests-section">
+            <h2>Incoming Requests</h2>
+            <div id="incomingRequests" class="requests-list">
+                <!-- Incoming swap requests will be loaded here -->
+            </div>
+        </div>
+
+        <div class="requests-section">
+            <h2>Outgoing Requests</h2>
+            <div id="outgoingRequests" class="requests-list">
+                <!-- Outgoing swap requests will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/requests.js"></script>
+</body>
+</html>

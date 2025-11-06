@@ -1,0 +1,72 @@
+<!-- frontend/calendar.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calendar - SlotSwapper</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">SlotSwapper</div>
+        <div class="nav-links">
+            <a href="calendar.html" class="nav-link active">My Calendar</a>
+            <a href="marketplace.html" class="nav-link">Marketplace</a>
+            <a href="requests.html" class="nav-link">Swap Requests</a>
+            <button id="logoutBtn" class="btn btn-outline">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="header-with-action">
+            <h1>My Calendar</h1>
+            <button id="addEventBtn" class="btn btn-primary">Add Event</button>
+        </div>
+
+        <!-- Add Event Modal -->
+        <div id="eventModal" class="modal">
+            <div class="modal-content">
+                <h3>Add New Event</h3>
+                <form id="eventForm">
+                    <div class="form-group">
+                        <label for="eventTitle">Title:</label>
+                        <input type="text" id="eventTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventStart">Start Time:</label>
+                        <input type="datetime-local" id="eventStart" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventEnd">End Time:</label>
+                        <input type="datetime-local" id="eventEnd" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventStatus">Status:</label>
+                        <select id="eventStatus">
+                            <option value="BUSY">Busy</option>
+                            <option value="SWAPPABLE">Swappable</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" id="cancelEventBtn" class="btn btn-secondary">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Event</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="events-list">
+            <h2>My Events</h2>
+            <div id="eventsContainer" class="events-grid">
+                <!-- Events will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/calendar.js"></script>
+</body>
+</html>

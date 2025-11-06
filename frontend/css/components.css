@@ -1,0 +1,196 @@
+/* frontend/css/components.css */
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+/* Forms */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+/* Events Grid */
+.events-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.event-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 4px solid #3498db;
+}
+
+.event-card.swappable {
+    border-left-color: #27ae60;
+}
+
+.event-card.pending {
+    border-left-color: #f39c12;
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.event-title {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.event-time {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.event-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Marketplace Grid */
+.marketplace-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.slot-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 2px solid #e9ecef;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slot-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.slot-user {
+    font-weight: 600;
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+.slot-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+/* Requests */
+.requests-section {
+    margin-bottom: 3rem;
+}
+
+.requests-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.request-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 4px solid #f39c12;
+}
+
+.request-card.accepted {
+    border-left-color: #27ae60;
+}
+
+.request-card.rejected {
+    border-left-color: #e74c3c;
+}
+
+.request-info {
+    margin-bottom: 1rem;
+}
+
+.request-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Slots List */
+.slots-list {
+    max-height: 300px;
+    overflow-y: auto;
+    margin: 1rem 0;
+}
+
+.slot-item {
+    padding: 1rem;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slot-item:hover {
+    background-color: #f8f9fa;
+}
+
+.slot-item.selected {
+    background-color: #e3f2fd;
+    border-color: #3498db;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-busy {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.status-swappable {
+    background-color: #27ae60;
+    color: white;
+}
+
+.status-pending {
+    background-color: #f39c12;
+    color: white;
+}
