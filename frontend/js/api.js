@@ -1,5 +1,5 @@
 // frontend/js/api.js
-const API_BASE_URL = 'https://slotswapper-5gmw.onrender.com/api';
+const API_BASE_URL = 'https://slot-swapper-0hzi.onrender.com';
 
 class ApiService {
     constructor() {
